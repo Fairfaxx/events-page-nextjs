@@ -11,10 +11,11 @@ function EventsSearch(props) {
     const selectedYear = yearInputRef.current.value;
     const selectedMonth = monthInputRef.current.value;
 
+    props.onSearch(selectedYear, selectedMonth);
   };
 
   return (
-    <form onsubmit={submitHandler} className={styles.form}>
+    <form onSubmit={submitHandler} className={styles.form}>
       <div className={styles.controls}>
         <div className={styles.control}>
           <label htmlFor="year">Year</label>
