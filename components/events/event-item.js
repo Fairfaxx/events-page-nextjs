@@ -3,7 +3,6 @@ import ArrowRightIcon from "../icons/arrow-right-icon";
 import Button from "../UI/button";
 import DateIcon from "../icons/date-icon";
 import styles from "./event-item.module.css";
-import Image from "next/image";
 
 const EventItem = (props) => {
   const { title, image, location, date, id } = props;
@@ -17,7 +16,11 @@ const EventItem = (props) => {
 
   return (
     <div className={styles.item}>
-      <Image src={`/${image}`} alt={title} className={styles.img} />
+      <img
+        src={`/${image}`}
+        alt={title}
+        className={styles.img}
+      />
       <div className={styles.content}>
         <div className={styles.summary}>
           <h2>{title}</h2>
@@ -33,7 +36,9 @@ const EventItem = (props) => {
         <div className={styles.actions}>
           <Button link={exploreLink}>
             <span>Explore Event</span>
-            <span className={styles.icon}><ArrowRightIcon /></span>
+            <span className={styles.icon}>
+              <ArrowRightIcon />
+            </span>
           </Button>
         </div>
       </div>
