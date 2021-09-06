@@ -1,10 +1,10 @@
-import {useRef} from 'react';
+import { useRef } from "react";
 import Button from "../UI/button";
-import styles from './events-search.module.css';
+import styles from "./events-search.module.css";
 
 function EventsSearch(props) {
-  const yearInputRef = useRef()
-  const monthInputRef = useRef()
+  const yearInputRef = useRef();
+  const monthInputRef = useRef();
 
   const submitHandler = (event) => {
     event.preventDefault();
